@@ -10,61 +10,7 @@ namespace Calculadora
     {
         static decimal valor1 = 0;
         static decimal valor2 = 0;
-
-        static void ImprimirMenu()
-        {
-            Console.WriteLine("------------MENU------------");
-            Console.WriteLine(" 1 - SOMA");
-            Console.WriteLine(" 2 - SUBTRAÇÃO");
-            Console.WriteLine(" 3 - MULTIPLICAÇÃO");
-            Console.WriteLine(" 4 - DIVISÃO");
-            Console.WriteLine("99 - SAIR");
-            Console.WriteLine("------------------------");
-        }
-
-        static decimal Operacoes(int operacao)
-        {
-            decimal resultado = 0;
-
-            switch (operacao)
-            {
-                case 1:
-                    Console.WriteLine("Opção Selecionada - SOMA");
-                    LerDados();
-                    resultado = valor1 + valor2;
-                    break;
-                case 2:
-                    Console.WriteLine("Opção Selecionada - SUBTRAÇÃO");
-                    LerDados();
-                    resultado = valor1 - valor2;
-                    break;
-                case 3:
-                    Console.WriteLine("Opção Selecionada - MULTIPLICAÇÃO");
-                    LerDados();
-                    resultado = valor1 * valor2;
-                    break;
-                case 4:
-                    Console.WriteLine("Opção Selecionada - DIVISÃO");
-                    LerDados();
-                    resultado = valor1 / valor2;
-                    break;
-                default:
-                    break;
-            }
-            return resultado;
-        }
-
-
-        static void LerDados()
-        {
-            Console.WriteLine("Informe o primeiro valor");
-            valor1 = decimal.Parse(Console.ReadLine());
-            Console.WriteLine($"O valor informado foi {valor1}");
-            Console.WriteLine("Informe o segundo valor");
-            valor2 = decimal.Parse(Console.ReadLine());
-            Console.WriteLine($"O valor informado foi {valor2}");
-        }
-
+        
         static void Main(string[] args)
         {
             int menu = 0;
@@ -126,6 +72,59 @@ namespace Calculadora
                     Console.Clear();
                 }
             }
+        }
+
+        static void ImprimirMenu()
+        {
+            Console.WriteLine("------------MENU------------");
+            Console.WriteLine(" 1 - SOMA");
+            Console.WriteLine(" 2 - SUBTRAÇÃO");
+            Console.WriteLine(" 3 - MULTIPLICAÇÃO");
+            Console.WriteLine(" 4 - DIVISÃO");
+            Console.WriteLine("99 - SAIR");
+            Console.WriteLine("------------------------");
+        }
+
+        static decimal Operacoes(int operacao)
+        {
+            decimal resultado = 0;
+
+            switch (operacao)
+            {
+                case 1:
+                    Console.WriteLine("Opção Selecionada - SOMA");
+                    LerDados();
+                    resultado = valor1 + valor2;
+                    break;
+                case 2:
+                    Console.WriteLine("Opção Selecionada - SUBTRAÇÃO");
+                    LerDados();
+                    resultado = valor1 - valor2;
+                    break;
+                case 3:
+                    Console.WriteLine("Opção Selecionada - MULTIPLICAÇÃO");
+                    LerDados();
+                    resultado = valor1 * valor2;
+                    break;
+                case 4:
+                    Console.WriteLine("Opção Selecionada - DIVISÃO");
+                    LerDados();
+                    resultado = valor1 / valor2;
+                    break;
+                default:
+                    break;
+            }
+            return resultado;
+        }
+
+        static void LerDados()
+        {
+            Console.WriteLine("Informe o primeiro valor");
+            valor1 = decimal.Parse(Console.ReadLine());
+            Console.WriteLine($"O valor informado foi {valor1}");
+            Console.WriteLine("Informe o segundo valor");
+            valor2 = decimal.Parse(Console.ReadLine());
+            Console.WriteLine($"O valor informado foi {valor2}");
         }
     }
 }
